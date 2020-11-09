@@ -1,0 +1,28 @@
+<form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value)">
+  <label for="nombre">nombre</label>
+  <input formControlName="nombre" type="text" name="nombre" id="nombre" />
+  <br />
+  <label for="usuario">Usuario</label>
+  <input formControlName="usuario" type="text" name="usuario" id="usuario" />
+  <br />
+  <label for="email">email</label>
+  <input formControlName="email" type="mail" name="email" id="email" />
+  <div
+    *ngIf="
+      signupForm.get('email').hasError('email') &&
+      signupForm.get('email').touched
+    "
+  >
+    Email no correcto
+  </div>
+  <br />
+  <label for="password">password</label>
+  <input
+    formControlName="clave"
+    type="password"
+    name="password"
+    id="password"
+  />
+  <br />
+  <button [disabled]="signupForm.invalid" type="submit">Registrar!</button>
+</form>
