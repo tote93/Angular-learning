@@ -1,0 +1,32 @@
+<!-- ngif indica que hasta que rates no este definido, no renderize el div -->
+<div class="container" *ngIf="rates">
+  <h1>Currency Converter</h1>
+  <!-- ngmodel permite hacer un binding en doble sentido de modo que enlaza el valor del dato
+a la variable al detectar un cambio -->
+  <input
+    type="number"
+    name="currency"
+    placeholder="Insert the amount to convert"
+    [(ngModel)]="amount"
+  />
+  <label for="currency">From: {{ from }}</label>
+  <select [(ngModel)]="from" (change)="loadRates()">
+    <option value="" *ngFor="let item of getAllCurrencies()" [value]="item">
+      {{ item }}
+    </option>
+  </select>
+
+  <label for="currency">To: {{ to }}</label>
+  <select [(ngModel)]="to">
+    <option value="" *ngFor="let item of getAllCurrencies()" [value]="item">
+      {{ item }}
+    </option>
+  </select>
+
+  <br />
+  <!-- ngstyle permite definir estilos inline, de modo que puedes 
+    establecer una condicion a estos -->
+  <b [ngStyle]="{ color: amount < 0 ? 'red' : '' }">
+    {{ amount.toFixed(2) }} {{ from }} = {{ convert().toFixed(2) }} {{ to }}</b
+  >
+</div>
