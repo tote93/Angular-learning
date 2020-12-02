@@ -1,0 +1,20 @@
+<div
+  class="banner"
+  *ngIf="trendingMovie"
+  [style.background-image]="'url(' + background + ')'"
+>
+  <youtube *ngIf="videoUrl" [id]="videoUrl"></youtube>
+  <div class="banner__content">
+    <h1 class="banner__contentTitle">{{ trendingMovie.original_title }}</h1>
+    <p class="banner__contentDescription">
+      {{ truncate(trendingMovie.overview) }}
+    </p>
+    <div class="banner__buttons">
+      <button><span class="material-icons"> play_arrow </span> Play</button>
+      <button (click)="openDialog()">
+        <span class="material-icons"> info </span>
+        More Information
+      </button>
+    </div>
+  </div>
+</div>

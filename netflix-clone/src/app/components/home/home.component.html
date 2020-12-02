@@ -1,0 +1,10 @@
+<ng-container>
+  <div class="modalFade" *ngIf="currentModalState"></div>
+  <header></header>
+  <banner></banner>
+  <row
+    *ngFor="let movies of urls"
+    [url]="movies.url"
+    [title]="movies.title"
+  ></row>
+</ng-container>

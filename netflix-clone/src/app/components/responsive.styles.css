@@ -1,0 +1,126 @@
+@media (max-width: 800px) {
+  .body {
+    overflow-y: scroll;
+  }
+  .banner__buttons {
+    flex-direction: column;
+  }
+  .header__moreOptions {
+    display: block;
+  }
+  .header {
+    justify-content: space-around;
+  }
+  .header__options,
+  .header__navigation {
+    display: none;
+    transition: 0.5s;
+  }
+  .row__back,
+  .row__next {
+    display: none;
+  }
+  .moreOptions {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh;
+    top: 8vh;
+    bottom: -5vh;
+    left: 0;
+    padding: 20px;
+    right: 0;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.4;
+    animation: displayOptions 0.5s ease-in-out forwards;
+    background: #151515;
+    opacity: 1;
+  }
+  .banner__contentDescription {
+    width: 20ch;
+  }
+  .rotateMoreOption {
+    animation: rotateElement 0.3s ease-in-out forwards;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .row {
+    margin-top: 5rem;
+  }
+  .header__options > .material-icons:nth-child(1) {
+    display: none;
+  }
+  .header__options > .material-icons {
+    font-size: 50px;
+  }
+  .movie__bannerImg {
+    max-width: 100%;
+    object-fit: cover;
+    height: inherit;
+  }
+  .banner__content {
+    top: 20vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    max-width: 300px;
+    padding: 10px;
+  }
+  youtube {
+    display: none;
+  }
+  /* Main Page*/
+  h1 {
+    font-size: 28px !important;
+    line-height: 32px !important;
+  }
+  h2 {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+  h3 {
+    font-size: 24px !important;
+  }
+  .membership__button {
+    font-size: 22px !important;
+  }
+  .membership__input {
+    width: 50vw !important;
+    min-width: 50vw !important;
+  }
+  .mainPage__content {
+    padding: 5vw !important;
+  }
+  .rowComponent__image > img {
+    height: 270px;
+    max-height: 370px;
+    max-width: 390px;
+  }
+  .rowComponent {
+    flex-direction: column;
+    text-align: center;
+    padding: 5vw !important;
+  }
+  .rowComponent__extraContainer {
+    display: none;
+  }
+}
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes rotateElement {
+  0% {
+    transform: rotate3d(0, 0, 0, -45deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 135deg);
+  }
+}
+@keyframes displayOptions {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 8vh;
+  }
+}

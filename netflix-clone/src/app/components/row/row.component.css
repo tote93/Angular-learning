@@ -1,0 +1,97 @@
+:host {
+  z-index: 100;
+}
+.row {
+  margin-left: 1.25rem;
+  height: 212px;
+  top: 600px;
+  bottom: -1px;
+  margin-top: 3rem;
+  width: 99%;
+}
+.row__posters {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.row__filmPoster {
+  display: flex;
+  position: relative;
+  padding: 1.25rem;
+  width: 100%;
+  margin-right: 1.25rem;
+}
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__title {
+  color: #fff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.row__back {
+  max-height: 8.9125rem;
+  width: 50px;
+  z-index: 90;
+  position: absolute;
+  left: 0px;
+  height: 8.9125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  cursor: pointer;
+  background: #111;
+  top: 19.5px;
+}
+
+.row__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 8.9125rem;
+  width: 50px;
+  cursor: pointer;
+  background: #111;
+  opacity: 0.7;
+  z-index: 90;
+  position: absolute;
+  right: 0;
+  top: 19.5px;
+  height: 8.9125rem;
+}
+.row__next > span,
+.row__back > span {
+  font-size: 50px;
+  color: #fff;
+  transition: 0.5s;
+}
+.row__next:hover > span,
+.row__back:hover > span {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+.row__filmMovie {
+  /* background: #191919; */
+  margin-right: 10px;
+}
+
+.row__film {
+  border-radius: 0.25rem;
+  object-fit: contain;
+  max-height: 8.9125rem;
+  transition: transform 450ms;
+  margin-right: 0.625rem;
+}
+
+.row__film:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}

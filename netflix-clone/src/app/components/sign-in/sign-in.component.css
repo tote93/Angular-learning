@@ -1,0 +1,145 @@
+.signIn {
+  height: 145vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.signIn__back {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: -1;
+}
+.signIn__background {
+  width: 100%;
+  height: 145vh;
+  object-fit: cover;
+}
+.signIn:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  left: 0;
+  height: 145vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  border-bottom: 8px solid #222;
+}
+.signIn__logo {
+  position: absolute;
+  height: 45px;
+  margin: 20px 0px 0px 40px;
+  object-fit: contain;
+  top: 10px;
+  left: 0;
+  cursor: pointer;
+}
+
+.signIn__content {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: fit-content;
+  width: 450px;
+  margin: 0px 0px 90px;
+  padding: 60px 68px 40px;
+  min-height: fit-content;
+  min-width: 380px;
+  display: flex;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.signIn__form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.signIn__form > h2 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+form > input {
+  width: 90%;
+  background: #e7f0fe;
+  padding: 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.form__submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  width: 90%;
+  margin: 15px 0;
+}
+
+form > button {
+  cursor: pointer;
+  background: #e50916;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  margin-top: 15px;
+  font-size: 18px;
+  border: none;
+  width: 90%;
+  padding: 15px;
+  font-weight: 700;
+}
+.signUp {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.signIn__login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #737373;
+  margin: 15px 0;
+}
+.icon-facebook {
+  height: 25px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+.signIn__additionalInfo {
+  color: #737373;
+}
+.learnMore {
+  color: #006fe4;
+}
+.form__submit > * {
+  color: #737373;
+}
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+.form__error {
+  color: rgb(240, 82, 82);
+  font-size: 22px;
+  padding: 10px;
+}
+.fbBtnText {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<div class="row" *ngIf="movieList">
+  <h2 class="row__title">{{ title }}</h2>
+  <div class="row__posters">
+    <div class="row__back" *ngIf="rotationX" (click)="rotateCarrousel(70)">
+      <span class="material-icons"> keyboard_arrow_left </span>
+    </div>
+    <div class="row__filmPoster" #rowPosters>
+      <div class="row__filmMovie" *ngFor="let film of movieList">
+        <img
+          class="row__film"
+          (click)="openDialog(film)"
+          src="https://image.tmdb.org/t/p/original/{{ film.backdrop_path }}"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="row__next" (click)="rotateCarrousel(-70)">
+      <span class="material-icons"> keyboard_arrow_right </span>
+    </div>
+  </div>
+</div>

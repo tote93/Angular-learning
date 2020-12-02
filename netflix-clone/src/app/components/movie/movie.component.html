@@ -1,0 +1,20 @@
+<div class="movie" *ngIf="film">
+  <div class="movie__banner">
+    <img
+      src="https://image.tmdb.org/t/p/original/{{ film.backdrop_path }}"
+      alt=""
+      class="movie__bannerImg"
+    />
+  </div>
+  <div class="banner__fadeBottom"></div>
+  <div class="movie__content">
+    <div class="movie__Left">
+      <h3>View first season now</h3>
+      <p>{{ truncate(film.overview) }}</p>
+    </div>
+    <div class="movie__right">
+      <span>Genders:</span>
+      {{ getGenres() }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div
+  class="rowComponent"
+  [ngClass]="{ 'rowComponent--inverted': data.inverted !== true }"
+>
+  <div class="rowComponent__image">
+    <img src="{{ data.image }}" alt="" />
+    <div
+      class="rowComponent__video"
+      *ngIf="data.video && styles"
+      [ngStyle]="{ top: styles.top, left: styles.left, width: styles.width }"
+    >
+      <video
+        class="rowComponent__videoSource"
+        autoplay=""
+        playsinline=""
+        muted=""
+        loop=""
+      >
+        <source src="{{ data.video }}" type="video/mp4" />
+      </video>
+    </div>
+    <div class="rowComponent__extraContainer" *ngIf="data.extra">
+      <div class="rowComponent__extraImgContainer">
+        <img
+          alt=""
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+        />
+      </div>
+      <div class="rowComponent__extraText">
+        <div id="" class="text-0" data-uia="">Stranger Things</div>
+        <div id="" class="text-1" data-uia="">Downloading...</div>
+      </div>
+    </div>
+  </div>
+  <div class="rowComponent__content">
+    <h2>{{ data.title }}</h2>
+    <h3>{{ data.subtitle }}</h3>
+  </div>
+</div>

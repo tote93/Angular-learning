@@ -1,0 +1,70 @@
+<section class="signIn">
+  <a routerLink=""
+    ><img src="assets/images/logo.png" alt="" class="signIn__logo"
+  /></a>
+  <div class="signIn__back">
+    <img
+      class="signIn__background"
+      src="https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+      srcset="
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg  1000w,
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w,
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_large.jpg  1800w
+      "
+      alt=""
+    />
+  </div>
+  <div class="signIn__content">
+    <div class="signIn__form">
+      <h2>Sign In</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="login(signupForm.value)">
+        <input
+          formControlName="email"
+          type="mail"
+          placeholder="Email"
+          name="email"
+          id="email"
+        />
+        <div
+          class="form__error"
+          *ngIf="
+            signupForm.get('email').hasError('email') &&
+            signupForm.get('email').touched
+          "
+        >
+          Email is not valid
+        </div>
+        <input
+          formControlName="password"
+          name="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="form__submit">
+        <p><input type="checkbox" name="" id="" />Remember me</p>
+        <p>Need help?</p>
+      </div>
+    </div>
+    <div class="signIn__info">
+      <div class="signIn__login" data-uia="fb-login">
+        <img
+          class="icon-facebook"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"
+        /><span (click)="loginWithGoogle()" class="fbBtnText"
+          >Login with Google</span
+        >
+      </div>
+      <div class="signIn__additionalInfo">
+        <p>New to Netflix? <span class="signUp">Sign up now.</span></p>
+        <p>
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          <span class="learnMore">Learn more.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>

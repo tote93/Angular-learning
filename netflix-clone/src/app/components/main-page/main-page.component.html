@@ -1,0 +1,46 @@
+<section class="mainPage">
+  <div class="mainPage__back">
+    <img
+      class="mainPage__background"
+      src="https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+      srcset="
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_small.jpg  1000w,
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w,
+        https://assets.nflxext.com/ffe/siteui/vlv3/bcd713c9-291e-4186-a275-117b387eaaf2/e2c6df78-a9bf-4cc1-903f-f84cf97c3f57/CZ-en-20201019-popsignuptwoweeks-perspective_alpha_website_large.jpg  1800w
+      "
+      alt=""
+    />
+  </div>
+  <div class="mainPage__header">
+    <img src="assets/images/logo.png" class="mainPage__logo" alt="App Logo" />
+    <a routerLink="/signin" class="mainPage__signIn">Sign In</a>
+  </div>
+  <div class="mainPage__content">
+    <div class="mainPage__title">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <h3>Watch anywhere. Cancel anytime.</h3>
+    </div>
+    <div class="mainPage__membership">
+      <h4>
+        Ready to watch? Enter your email to create or restart your membership.
+      </h4>
+      <div class="membership__form">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email address"
+          class="membership__input"
+        />
+        <button class="membership__button">
+          Get Started
+          <span class="material-icons membership__arrow">
+            keyboard_arrow_right
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<home-row *ngFor="let data of jsonData" [data]="data"></home-row>

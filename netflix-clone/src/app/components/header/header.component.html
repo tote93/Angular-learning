@@ -1,0 +1,27 @@
+<div class="header">
+  <img src="assets/images/logo.png" class="header__logo" alt="App Logo" />
+  <ul class="header__navigation">
+    <li class="header__navigation--active">Home</li>
+    <li>TV Series</li>
+    <li>Films</li>
+    <li>Most Viewed News</li>
+    <li>My List</li>
+  </ul>
+  <div class="header__options" [ngClass]="{ moreOptions: moreOptions }">
+    <span class="material-icons"> search </span>
+    <span class="material-icons"> card_giftcard </span>
+    <span class="material-icons"> notifications </span>
+    <img src="{{ photoUrl }}" alt="User Image" (click)="setActive()" />
+    <ul class="option__userList" *ngIf="active && user.email">
+      <li>{{ user.email }}</li>
+      <li (click)="logOut()">Log Out</li>
+    </ul>
+  </div>
+  <span
+    (click)="displayMenu()"
+    [ngClass]="{ rotateMoreOption: moreOptions }"
+    class="material-icons header__moreOptions"
+  >
+    apps
+  </span>
+</div>
